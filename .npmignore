@@ -1,0 +1,12 @@
+# Logs
+/studio/logs
+/studio/*.log
+
+# Coverage directory used by tools like istanbul
+/studio/coverage
+
+# Dependency directories
+/studio/node_modules
+
+# Compiled sanity studio
+/studio/dist
