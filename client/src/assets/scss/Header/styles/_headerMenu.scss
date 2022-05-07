@@ -1,0 +1,21 @@
+.btnConnectWallet {
+  display                     : flex;
+  flex-direction              : row;
+  background-color            : $green-lime-light;
+  border-radius               : 25px;
+  padding                     : 5px 10px 5px 10px;
+  -webkit-tap-highlight-color : transparent;
+  transition                  : 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $green-lime-dark;
+  }
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  #txtConnectWallet {
+    display: none;
+  }
+}
