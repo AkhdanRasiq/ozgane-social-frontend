@@ -1,15 +1,39 @@
+.headerMenuContainer {
+  display         : flex;
+  flex-direction  : row;
+  align-items     : center;
+}
+
 .btnConnectWallet {
-  display                     : flex;
-  flex-direction              : row;
-  background-color            : $green-lime-light;
-  border-radius               : 25px;
-  padding                     : 5px 10px 5px 10px;
-  -webkit-tap-highlight-color : transparent;
-  transition                  : 0.2s;
+  display           : flex;
+  flex-direction    : row;
+  background-color  : $green-lime-light;
+  border-radius     : 25px;
+  padding           : 2px 10px 2px 10px;
+  transition        : 0.2s;
 
   &:hover {
-    cursor: pointer;
+    cursor          : pointer;
     background-color: $green-lime-dark;
+  }
+}
+
+#dividerHeaderMenu {
+  border-color: rgba(255, 255, 255, 0.5);
+  margin-left: 10px;
+}
+
+#btnHeaderMenu {
+  padding-left    : 5px;
+  padding-right   : 5px;
+  margin-left     : 5px;
+  transition      : 0.2s;
+  border          : 1px solid transparent;
+  border-radius   : 5px;
+
+  &:hover {
+    cursor        : pointer;
+    border-color  : $green-lime-light;
   }
 }
 

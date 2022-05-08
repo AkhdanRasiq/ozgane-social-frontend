@@ -12,8 +12,8 @@ function OZHeaderSearch() {
     setSearchValue(event.target.value)
   }
 
-  const onKeyPress = (event: React.KeyboardEvent): any => {
-    if (event.key === 'Enter') {
+  const onKeyPress = (event: React.KeyboardEvent) => {
+    if ((event as React.KeyboardEvent).key === 'Enter') {
       console.log(searchValue)
     }
   }
