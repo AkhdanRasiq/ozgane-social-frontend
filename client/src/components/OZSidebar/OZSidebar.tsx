@@ -77,7 +77,7 @@ function OZSidebar() {
       >
         <OZSidebarHeader />
         <div className="imgSidebarCryptoLogoContainer">
-          <div className="imgSidebarCryptoLogo">
+          <div className="imgSidebarCryptoLogo noSelect">
             <Image src={ethIcon} layout="responsive"/>
           </div>
           <p id="txtSidebarCryptoBalance">0.35472383 ETH</p>
@@ -95,8 +95,23 @@ function OZSidebar() {
           </div>
         </div>
 
-        <div className="m-10">
-          <OZBtnActionIcon />
+        <div className="w-[100%] flex justify-center mt-[25px]">
+          <OZBtnActionIcon
+            a_strText="Send"
+            a_img={require('../../assets/img/icon/icon_send.png')}
+          />
+          <OZBtnActionIcon
+            className="ml-[10px]"
+            a_strText="Swap"
+            a_img={require('../../assets/img/icon/icon_swap.png')}
+          />
+        </div>
+        <div className="w-[100%] flex justify-center mt-[10px]">
+          <OZBtnActionIcon
+            className="!px-[25px] !border-[#FF0000] hover:!bg-[#FF0000]"
+            a_strText="Disconnect Wallet"
+            a_img={require('../../assets/img/icon/icon_disconnect.png')}
+          />
         </div>
 
       </Box>

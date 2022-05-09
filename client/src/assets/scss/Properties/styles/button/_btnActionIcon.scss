@@ -1,24 +1,24 @@
 .btnActionIconContainer {
   display       : flex;
   flex-direction: row;
-  border: 2px solid $green-lime-light;
-  border-radius: 5px;
-  width: fit-content;
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: 0.2s;
+  border        : 2px solid $green-lime-light;
+  border-radius : 10px;
+  width         : fit-content;
+  padding       : 5px 15px 5px 15px;
+  transition    : 0.2s;
 
   &:hover {
-    cursor: pointer;
+    cursor          : pointer;
     background-color: $green-lime-light;
   }
 
   & > p {
-    color: $p-color;
+    color       : $p-color;
+    margin-left : 5px;
   }
 }
 
 .imgActionIcon {
-  width   : 10px;
-  height  : 10px;
+  width   : 25px;
+  height  : 100%;
 }

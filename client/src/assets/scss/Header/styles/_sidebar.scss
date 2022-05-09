@@ -38,26 +38,26 @@
   height          : fit-content;
   display         : flex;
   flex-direction  : column;
-  margin-top: 10px;
+  margin-top      : 10px;
 }
 
 .sidebarAddressContainer {
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
+  display         : flex;
+  flex-direction  : row;
+  margin-left     : auto;
+  margin-right    : auto;
 }
 
 #imgSidebarInfo {
-  margin-right: 10px;
+  margin-right  : 10px;
 }
 
 .txtSidebarInfo {
-  color: white;
-  width: 180px;
-  overflow:hidden; 
-  white-space:nowrap; 
-  text-overflow: ellipsis;
+  color           : white;
+  width           : 180px;
+  overflow        : hidden; 
+  white-space     : nowrap; 
+  text-overflow   : ellipsis;
 }
 
 

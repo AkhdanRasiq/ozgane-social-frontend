@@ -2,13 +2,19 @@ import Image from "next/image"
 import React from "react"
 
 
-function OZBtnActionIcon() {
+interface IOZBtnActionIconProps {
+  className ?: string,
+  a_img     : HTMLImageElement,
+  a_strText : string
+}
+
+function OZBtnActionIcon({ className, a_img, a_strText }: IOZBtnActionIconProps) {
   return (
-    <div className="btnActionIconContainer">
-      <div className="imgActionIcon">
-        <Image src="/#" layout="responsive" width={0} height={0} />
+    <div className={`btnActionIconContainer ${className}`}>
+      <div className="imgActionIcon noSelect">
+        <Image src={a_img} layout="responsive" />
       </div>
-      <p className="txtNoSelect">hello</p>
+      <p className="noSelect">{a_strText}</p>
     </div>
   )
 }
