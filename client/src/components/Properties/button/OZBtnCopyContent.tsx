@@ -14,7 +14,7 @@ function OZBtnCopyContent({ a_strText }: I_OZBtnCopyContentProps) {
       navigator.clipboard.writeText(a_strText)
       setTooltipText("Copied to Clipboard!")
     } catch (error) {
-      setTooltipText("protocol not secured!")
+      setTooltipText("Protocol not Secured!")
     }
     setTooltipOpen(true)
     setTimeout(() => {

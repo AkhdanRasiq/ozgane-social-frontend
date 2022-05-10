@@ -42,18 +42,19 @@ function OZSidebar() {
 
         <div className="w-[100%] flex justify-center mt-[25px]">
           <OZBtnActionIcon
+            className ="!px-[25px]"
             a_strText = "Send"
-            a_img     = {require('../../assets/img/icon/icon_send.png')}
+            a_img     = {require('../../assets/img/icon/icon_coin.png')}
           />
           <OZBtnActionIcon
-            className = "ml-[10px]"
+            className = "ml-[5px]"
             a_strText = "Request"
-            a_img     = {require('../../assets/img/icon/icon_swap.png')}
+            a_img     = {require('../../assets/img/icon/icon_request_coin.png')}
           />
         </div>
-        <div className="w-[100%] flex justify-center mt-[10px]">
+        <div className="w-[100%] flex justify-center mt-[7px]">
           <OZBtnActionIcon
-            className = "!px-[25px] !border-[#FF0000] hover:!bg-[#FF0000]"
+            className = "!px-[42px] !border-[#FF0000] hover:!bg-[#FF0000]"
             a_strText = "Disconnect Wallet"
             a_img     = {require('../../assets/img/icon/icon_disconnect.png')}
           />

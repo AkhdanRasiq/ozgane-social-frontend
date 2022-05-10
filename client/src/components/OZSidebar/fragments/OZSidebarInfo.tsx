@@ -15,7 +15,7 @@ function OZSidebarInfo() {
       </div>
       <div className="sidebarAddressContainer mt-[15px]">
         <TokenIcon id="imgSidebarInfo" fontSize="medium" htmlColor="#FFFFFF" />
-        <p className="txtSidebarInfo">ERC20</p>
+        <p className="txtSidebarInfo mr-[37px]">ERC20</p>
       </div>
     </div>
   )
