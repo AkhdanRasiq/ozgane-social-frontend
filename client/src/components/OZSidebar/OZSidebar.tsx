@@ -27,15 +27,21 @@ function OZSidebar() {
       setState(open)
     }
 
+    const handleOnCloseClick = () => {
+      setState(false)
+      console.log("tutup")
+    }
+
 
     const sidebarDrawer = () => (
       <Box
         className="boxSidebarDrawer"
         role="presentation"
-        // onClick={toggleDrawer(false)}
         onKeyDown={toggleDrawer(false)}
       >
-        <OZSidebarHeader />
+        <OZSidebarHeader
+          callbackOnCloseClick={handleOnCloseClick}
+        />
         <OZSidebarBalance />
 
         <OZSidebarInfo />
