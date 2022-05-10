@@ -1,0 +1,7 @@
+{
+  "time": {
+    "fast_ms"   : 1000,
+    "normal_ms" : 2000,
+    "long_ms"   : 3000
+  }
+}

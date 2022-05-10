@@ -1,0 +1,42 @@
+.btnCopyContentContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: $second-color;
+  border: 2px solid $green-lime-light;
+  border-radius: 5px;
+}
+
+.imgBtnCopyContent {
+  width : 24px;
+  height: 24px;
+  background-color: $green-lime-light;
+  padding: 4px;
+  border-radius: 0px 0px 0px 0px;
+  transition: 0.2s;
+
+  &:active {
+    cursor: pointer;
+
+    background-color: $green-lime-dark;
+  }
+}
+
+.txtCopyContent {
+  color           : white;
+  width           : 180px;
+  overflow-x      : auto;
+  margin-left     : 5px;
+  margin-right    : 5px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 601px) {
+  .imgBtnCopyContent:hover {
+    cursor: pointer;
+    background-color: $green-lime-dark;
+  }
+}

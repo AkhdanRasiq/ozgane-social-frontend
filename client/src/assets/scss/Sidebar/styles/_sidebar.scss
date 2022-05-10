@@ -1,0 +1,14 @@
+.boxSidebarDrawer {
+  width: 350px !important;
+}
+
+.MuiPaper-root {
+  background-color: $primary-color;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  .boxSidebarDrawer {
+    width: 100vw !important;
+  }
+}
