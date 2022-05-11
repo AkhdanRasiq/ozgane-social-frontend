@@ -10,7 +10,7 @@ function OZHeader() {
     <div className="headerNav">
       <OZSidebar />
       <div className="imgMainLogo">
-        <Image layout="responsive" src={require('../../assets/img/logo_main.png')} alt="ozgane logo" />
+        <Image layout="responsive" src={require('../../assets/img/logo_main.png')} />
       </div>
       <p id="txtHeaderTitle">Ozgane</p>
 

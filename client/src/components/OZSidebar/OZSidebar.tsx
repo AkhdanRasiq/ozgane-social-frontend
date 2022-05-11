@@ -29,7 +29,6 @@ function OZSidebar() {
 
     const handleOnCloseClick = () => {
       setState(false)
-      console.log("tutup")
     }
 
 
@@ -72,7 +71,6 @@ function OZSidebar() {
 
   return(
     <div>
-      {/* <Button onClick={toggleDrawer(true)}>Open</Button> */}
       <IconButton onClick={toggleDrawer(true)}>
         <MenuIcon fontSize="medium" htmlColor="#FFFFFF" />
       </IconButton>

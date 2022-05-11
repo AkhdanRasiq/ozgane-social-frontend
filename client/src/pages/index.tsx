@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import OZHeader from '../src/components/OZHeader/OZHeader'
+import OZHeader from '../components/OZHeader/OZHeader'
 
 
 const style = {
