@@ -5,7 +5,7 @@ import { IProfileSlice } from './interface/OZWeb3SliceInterface'
 
 const initialState: IProfileSlice = {
   account: {
-    address: '',
+    address: '0x0',
     balance: '',
     network: ''
   }

@@ -1,4 +1,5 @@
 import { ethers } from 'ethers'
+import { stateProfileGenerator } from './dataGenerator'
 
 
 async function _getAccount(metamask: any): Promise<string> {
@@ -12,28 +13,39 @@ async function _getAccount(metamask: any): Promise<string> {
 }
 
 async function _getBalance(metamask: any, address: string) {
-  console.log(address)
-  const balances = await metamask.request({
-    method: "eth_getBalance",
-    params: [address, "latest"]
-  })
-  .then((balance: string) => {
-    console.log(ethers.utils.formatEther(balance))
-  }, (error: any) => {
+  try {
+    const balance = await metamask.request({
+      method: "eth_getBalance",
+      params: [address, "latest"]
+    })
+    return Promise.resolve(stateProfileGenerator(address, ethers.utils.formatEther(balance)))
+  } catch (error) {
     console.error(error)
-  })
+    return Promise.reject(error)
+  }
 }
 
-export function connectWallet() {
+export async function connectWallet() {
   const metamask = window.ethereum
 
   if (!metamask)
     return alert('Please install metamask!')
 
-  _getAccount(metamask)
-  .then((account) =>  { 
-                        _getBalance(metamask, account)
-                      },
-        (error)   =>  { console.error(error) })
+  const account = await _getAccount(metamask)
+  .then((account) => { return _getBalance(metamask, account) },
+        (error)   => { console.error(error) })
 
+  return account
+}
+
+export async function checkConnection(): Promise<string> {
+  const metamask = window.ethereum
+
+  try {
+    const accounts = await metamask.request({ method: 'eth_accounts'})
+    return Promise.resolve(accounts[0])
+  } catch (error) {
+    console.error(error)
+    return Promise.reject(error)
+  }
 }

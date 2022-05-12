@@ -26,6 +26,9 @@
 /client/yarn-error.log*
 /client/.pnpm-debug.log*
 
+# env static files
+/client/src/static/env.json
+
 # local env files
 /client/.env.local
 /client/.env.development.local

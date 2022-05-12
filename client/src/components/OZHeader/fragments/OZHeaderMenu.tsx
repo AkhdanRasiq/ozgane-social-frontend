@@ -6,11 +6,34 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import PermIdentityIcon from '@mui/icons-material/PermIdentity'
 import { connectWallet } from "../../../tools/adapters"
 
+import { useAppSelector, useAppDispatch } from '../../../app/hooks'
+import { selectCurrentAccount, setAccount } from '../../../features/web3/profileSlice'
+
+import { useMoralis } from 'react-moralis'
+
 
 function OZHeaderMenu() {
+  const dispatch          = useAppDispatch()
+  const { authenticate, isAuthenticated, user } = useMoralis()
+
+  const handleConnectWallet = async () => {
+    // dispatch(setAccount(await connectWallet()))
+
+    if (!isAuthenticated) {
+
+      await authenticate()
+        .then(function (user) {
+          console.log(user!.get("ethAddress"))
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+    }
+  }
+
   return (
     <div className="headerMenuContainer">
-      <div className="btnConnectWallet" onClick={connectWallet}>
+      <div className="btnConnectWallet" onClick={handleConnectWallet}>
         <p id="txtConnectWallet">Connect</p>
         <AccountBalanceWalletIcon fontSize="medium" htmlColor="#FFFFFF" />
       </div>
