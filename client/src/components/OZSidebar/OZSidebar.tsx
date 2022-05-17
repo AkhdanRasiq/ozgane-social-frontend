@@ -8,11 +8,18 @@ import OZSidebarHeader from "./fragments/OZSidebarHeader"
 import OZBtnActionIcon from "../Properties/button/OZBtnActionIcon"
 import OZSidebarBalance from "./fragments/OZSidebarBalance"
 import OZSidebarInfo from "./fragments/OZSidebarInfo"
+import { useMoralis } from "react-moralis"
 
 
 function OZSidebar() {
+  const { logout } = useMoralis()
   const [state, setState] = useState(true)
 
+
+  const handleDisconnectWallet = async () => {
+    await logout()
+    console.log("logged out")
+  }
 
   const toggleDrawer =
     (open: boolean) =>
@@ -59,9 +66,10 @@ function OZSidebar() {
         </div>
         <div className="w-[100%] flex justify-center mt-[7px]">
           <OZBtnActionIcon
-            className = "!px-[42px] !border-[#FF0000] hover:!bg-[#FF0000]"
-            a_strText = "Disconnect Wallet"
-            a_img     = {require('../../assets/img/icon/icon_disconnect.png')}
+            className         = "!px-[42px] !border-[#FF0000] hover:!bg-[#FF0000]"
+            a_strText         = "Disconnect Wallet"
+            a_img             = {require('../../assets/img/icon/icon_disconnect.png')}
+            onClickCallback   = {handleDisconnectWallet} 
           />
         </div>
 

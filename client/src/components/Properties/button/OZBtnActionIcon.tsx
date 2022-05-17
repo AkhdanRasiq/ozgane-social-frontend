@@ -3,9 +3,9 @@ import React from "react"
 import { I_OZBtnActionIconProps } from "./interface/OZBtnInterface"
 
 
-function OZBtnActionIcon({ className, a_img, a_strText }: I_OZBtnActionIconProps) {
+function OZBtnActionIcon({ className, a_img, a_strText, onClickCallback }: I_OZBtnActionIconProps) {
   return (
-    <div className={`btnActionIconContainer ${className}`}>
+    <div className={`btnActionIconContainer ${className}`} onClick={onClickCallback}>
       <div className="imgActionIcon noSelect">
         <Image src={a_img} layout="responsive" />
       </div>

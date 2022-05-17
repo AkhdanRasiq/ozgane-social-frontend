@@ -1,7 +1,7 @@
 import '../../styles/globals.css'
 import type { AppProps } from 'next/app'
 import '../assets/scss/styles.scss'
-import * as env from '../static/env.json'
+import env from '../static/env.json'
 import { MoralisProvider } from "react-moralis"
 
 import { Provider } from 'react-redux'

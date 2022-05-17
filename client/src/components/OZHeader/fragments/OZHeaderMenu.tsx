@@ -14,13 +14,14 @@ import { useMoralis } from 'react-moralis'
 
 function OZHeaderMenu() {
   const dispatch          = useAppDispatch()
-  const { authenticate, isAuthenticated, user } = useMoralis()
+  const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis()
 
   const handleConnectWallet = async () => {
     // dispatch(setAccount(await connectWallet()))
 
     if (!isAuthenticated) {
 
+      // await authenticate({ network: 'ropsten' })
       await authenticate()
         .then(function (user) {
           console.log(user!.get("ethAddress"))
@@ -30,6 +31,7 @@ function OZHeaderMenu() {
         })
     }
   }
+
 
   return (
     <div className="headerMenuContainer">
